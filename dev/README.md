@@ -24,6 +24,7 @@ docker-compose up
 
 This will bring up:
 - `postgresql` database container
-- `web` container with our application.
+- `web` container with application.
 
 `web` container entrypoint creates `nestjsrealworld` database, which then used by nodejs application.
+After containers are up and running, application is available at [localhost:3000](http:localhost:3000) address.
