@@ -33,7 +33,7 @@ Copy config file and set JsonWebToken secret key
 
 The codebase contains examples of two different database abstractions, namely [TypeORM](http://typeorm.io/) and [Prisma](https://www.prisma.io/). 
     
-The branch `master` implements TypeORM with a mySQL database.
+The branch `master` implements TypeORM with a PostgreSQL database.
 
 The branch `prisma` implements Prisma with a mySQL database.
 
@@ -43,7 +43,7 @@ The branch `prisma` implements Prisma with a mySQL database.
 
 ----------
 
-Create a new mysql database with the name `nestjsrealworld`\
+Create a new PostgreSQL database with the name `nestjsrealworld`\
 (or the name you specified in the ormconfig.json)
 
 Copy TypeORM config example file for database settings
@@ -53,17 +53,17 @@ Copy TypeORM config example file for database settings
 Set mysql database settings in ormconfig.json
 
     {
-      "type": "mysql",
+      "type": "postgres",
       "host": "localhost",
-      "port": 3306,
-      "username": "your-mysql-username",
-      "password": "your-mysql-password",
+      "port": 5432,
+      "username": "your-postgres-username",
+      "password": "your-postgres-password",
       "database": "nestjsrealworld",
       "entities": ["src/**/**.entity{.ts,.js}"],
       "synchronize": true
     }
     
-Start local mysql server and create new database 'nestjsrealworld'
+Start local postgres server and create new database 'nestjsrealworld'
 
 On application start, tables for all entities will be created.
 
