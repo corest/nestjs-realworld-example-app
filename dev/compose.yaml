@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:14beta3-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+  web:
+    image: localhost/nestjsrealworld:latest
+    restart: always
+    ports:
+      - "3000:3000"
